@@ -1,16 +1,21 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: kube-for-app
-  namespace: default 
+  name: appli-ku #LBforKC 
   labels:
-    server: "nginx"
+    server: nginx
 spec:
-  ports:
-  - port: 80
-    protocol: TCP
-    targetPort: 80
   selector:
-    run: kube-for-app
-  type: "LoadBalancer"
+    app: appli-ku
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 80
+    - name: https
+      protocol: TCP
+      port: 443
+      targetPort: 9377
+  type: LoadBalancer
   loadBalancerIP: ""
+  

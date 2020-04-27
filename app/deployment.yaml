@@ -23,5 +23,5 @@ spec:
         imagePullPolicy: IfNotPresent
         name: env-for-app
         ports:
-        - containerPort: 8090
+        - containerPort: 8080
           protocol: TCP

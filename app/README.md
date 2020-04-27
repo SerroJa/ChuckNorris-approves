@@ -1,4 +1,5 @@
 #create & deploy pods & service \
+      $ kubectl get ns
 1.    $ kubectl apply -f deployment file \
   1a. deployment.extensions/kube-for-app created \
 2.    $ kubectl apply -f service file \

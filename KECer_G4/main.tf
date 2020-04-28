@@ -27,7 +27,7 @@ resource "google_container_node_pool" "default" {
 
   node_config {
     preemptible  = true
-    machine_type = "${var.machine_type}"
+    machine_type = "${var.type_machine}"
 
     metadata = {
       disable-legacy-endpoints = "true"

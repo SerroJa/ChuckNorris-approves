@@ -1,18 +1,20 @@
 variable "name" {
-  default = "demo-cluster"
+	type = string
+ 	default = "cluster-4-team"
 }
 variable "project" {
-  default = "optimum-spring-238818"
+	type = string
+        default = "devops-274919" 
+}
+variable "init_node_count" {
+	default = 1
+}
+variable "type_machine" {
+	type = string
+	default = "n1-standard-1"
+}
+variable "region_type" {
+	type = string
+	default = "europe-west1"
 }
 
-variable "location" {
-  default = "us-central1"
-}
-
-variable "initial_node_count" {
-  default = 1
-}
-
-variable "machine_type" {
-  default = "n1-standard-1"  
-}

@@ -43,5 +43,3 @@ spec:
       - name: nginx-proxy-config
         configMap:
           name: appli-ku-nginx-conf
-        - containerPort: 8080
-          protocol: TCP

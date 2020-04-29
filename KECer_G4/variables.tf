@@ -17,4 +17,7 @@ variable "region_type" {
 	type = string
 	default = "europe-west1"
 }
-
+variable "name_service" {
+	type = string
+	default = "appli-ku-svc-lb"
+}

@@ -4,20 +4,23 @@ variable "name" {
 }
 variable "project" {
 	type = string
-        default = "devops-274919" 
+        default = "devops-274919" // what project I should choose
 }
-variable "init_node_count" {
-	default = 1
-}
-variable "type_machine" {
-	type = string
-	default = "n1-standard-1"
-}
+
 variable "region_type" {
 	type = string
-	default = "europe-west1"
+  	default = "europe-west1"
 }
-variable "name_service" {
+
+variable "init_node_count" {
+  	default = 1
+}
+
+variable "machine_type" {
 	type = string
-	default = "appli-ku-svc-lb"
+	default = "n1-standard-1" //"n1-standard-1"
+}
+variable "github_token" {
+	description = " used token to access github"
+	type = string
 }

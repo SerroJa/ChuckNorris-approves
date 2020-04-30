@@ -8,6 +8,5 @@ COPY tomcat-users.xml /usr/local/tomcat/conf/
 COPY context.xml /usr/local/tomcat/webapps/manager/META-INF/
 COPY context.xml /usr/local/tomcat/webapps/host-manager/META-INF/
 COPY sample.war /usr/local/tomcat/webapps/sample.war
-COPY moving-balls.war /usr/local/tomcat/webapps/moving-balls.war
 
 EXPOSE 8080

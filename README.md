@@ -7,4 +7,4 @@
 2.app - deployment on pods
 3.docker - dockerfile for environment
 4.war - some application
->>>>>>> 626757ab3b57463e052003a137ebd2e1be26afd4
+>    626757ab3b57463e052003a137ebd2e1be26afd4

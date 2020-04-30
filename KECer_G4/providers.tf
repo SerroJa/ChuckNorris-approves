@@ -1,10 +1,10 @@
 provider "google" {
 	  project = var.project
 	  region  = var.region_type
-	  credentials = file("DevOps-c672af380b15.json")
+	  credentials = file("DevOps-773ad41722e1.json")
 }
 provider "kubernetes" {
-  load_config_file = "false"
+  load_config_file = "true"
 
   host = "https://104.196.242.174"
 
@@ -13,11 +13,12 @@ provider "kubernetes" {
 }
 
 #provider "kubernetes" {
+# load_config_file = "false"
 
- # host = "https://104.196.242.174"
+#  host = "https://104.196.242.174"
 
-  #client_certificate     = "~/.kube/client-cert.pem" //?
-  #client_key             = "~/.kube/client-key.pem"
-  #cluster_ca_certificate = "~/.kube/cluster-ca-cert.pem"
-  
+# client_certificate     = file("~/.kube/client-cert.pem")
+# client_key             = file("~/.kube/client-key.pem")
+# cluster_ca_certificate = file("~/.kube/cluster-ca-cert.pem")
+
 #}

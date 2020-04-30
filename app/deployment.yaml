@@ -1,9 +1,10 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: server-deployment
+  name: server-deployment 
   labels:
-    app: appli-ku
+    app: appli-ku 
 spec:
   strategy:
     type: RollingUpdate
@@ -13,7 +14,7 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: appli-ku
+      app: appli-ku 
   template:
     metadata:
       labels:
@@ -22,14 +23,13 @@ spec:
       containers:
       - name: env-tomcat #nginx-2
         image: eu.gcr.io/devops-p/docker
-        ports:
-        - containerPort: 8090
+        #ports:
+        #- containerPort: 8090
       - name: server #nginx-1
-        # image: eu.gcr.io/juice-shop-project/nginx:V1
-        image: nginx:latest
+        image: eu.gcr.io/juice-shop-project/nginx:v1
         ports:
         - containerPort: 80
-        resources:
+        resources:      
           limits:
             cpu: "1"
             memory: "500Mi"

@@ -8,6 +8,7 @@ COPY tomcat-users.xml /usr/local/tomcat/conf/
 COPY context.xml /usr/local/tomcat/webapps/manager/META-INF/
 COPY context.xml /usr/local/tomcat/webapps/host-manager/META-INF/
 COPY java_app.war /usr/local/tomcat/webapps/java_app.war
+COPY app.war /usr/local/tomcat/webapps/app.war
 
 
 EXPOSE 8080

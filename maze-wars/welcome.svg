@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg id='root' viewBox='-302 -302 604 604' zoomAndPan='magnify' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<!--
+	Maze Wars SVG, by Chris W. Johnson, is a web-based, first-person shooter ultimately inspired by the famous game 
+	"Maze War" created by Steve Colley, Howard Palmer and Greg Thompson. 
+	
+	Copyright (C) 2008-2009 Chris W. Johnson. <http://chriswjohnson.blogspot.com/>
+	
+	Maze Wars SVG is free software: you can redistribute it and/or modify it under the terms of the GNU General Public 
+	License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any 
+	later version.
+	
+	This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied 
+	warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more 
+	details.
+	
+	You should have received a copy of the GNU General Public License along with this program. If not, see 
+	<http://www.gnu.org/licenses/>.
+-->
+
+<title>Maze Wars SVG Welcome Graphic</title>
+<desc>Maze Wars SVG Welcome Graphic by Chris W. Johnson. &lt;http://chriswjohnson.blogspot.com/&gt;</desc>
+
+<defs>
+
+	<style type='text/css'><![CDATA[
+		
+		svg {
+		/*	background-color: inherit;  *//* This worked in Safari 3, but has ceased to work in Safari 4, and other browsers based on that WebKit engine. */
+			background-color: #404040;    /* This is the background color of the "main.html" page. Since we can't depend on "inherit", we have to hard-code this common color value into both files. Ugh. */
+		}
+		
+		*.eyeball {
+			stroke: white;
+			stroke-width: 1px;
+		}
+			
+		*.eyeball-firefox-hack {
+			fill: black;
+		}
+		
+		*.iris {
+			fill: #7a7ade;
+		}
+		
+		*.iris-overlay {
+			opacity: 0.45;
+		}
+	
+		*.pupil {
+			fill: black;	
+		}
+
+	]]></style>
+
+<!-- Common eyeball elements. -->
+
+	<radialGradient id="eyeball-gradient" gradientUnits='userSpaceOnUse' r='300' cx='0' cy='0' fx='0' fy='0' spreadMethod='reflect'>
+		<stop offset="0%"   stop-color="#303030"/>
+		<stop offset="100%" stop-color="black" />
+	</radialGradient>
+	
+	<radialGradient id="eye-white-gradient" gradientUnits='userSpaceOnUse' r='300' cx='0' cy='0' fx='0' fy='0' spreadMethod='reflect'>
+		<stop offset="0%"   stop-color="white"/>
+		<stop offset="40%"  stop-color="white"/>
+		<stop offset="100%" stop-color="gray" />
+	</radialGradient>
+	
+	<radialGradient id="iris-gradient" gradientUnits='userSpaceOnUse' r='129' cx='0' cy='0' fx='0' fy='0' spreadMethod='reflect'>
+		<stop offset="0%"   stop-color="white"  />
+		<stop offset="50%"  stop-color="#A0A0A0"/>
+		<stop offset="100%" stop-color="black"  />
+	</radialGradient>
+	
+<!-- Eyeball seen from the front. -->
+	
+	<path id='eye-white-front' d='M-299,0A298,107 0 0,1 299,0A298,107 0 0,1 -299,0z'/>
+	<clipPath id='eye-white-front-clip'><use xlink:href='#eye-white-front'/></clipPath>
+	
+	<g id='eye-front'>
+		<circle cx='0' cy='0' r='300' class="eyeball eyeball-firefox-hack"/>	<!-- This circle is useless, being completely obscured by the circle that follows, *except* in Firefox, which has a bug that prevents it from using the gradient fill on the following circle. -->
+		<circle cx='0' cy='0' r='300' class="eyeball" fill="url(#eyeball-gradient)"/>
+		<g clip-path='url(#eye-white-front-clip)'>
+			<circle class="eye-white-front-circle" cx="0" cy="0" r="300" fill="url(#eye-white-gradient)"/>
+			<circle class='iris' cx='0' cy='0' r='129'/>
+			<circle class='iris-overlay' cx='0' cy='0' r='129' fill='url(#iris-gradient)'/>
+			<circle class='pupil' cx='0' cy='0' r='34'/>
+		</g>
+	</g>
+
+</defs>
+
+<use xlink:href="#eye-front"/>
+	
+</svg>

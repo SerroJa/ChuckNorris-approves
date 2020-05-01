@@ -26,7 +26,7 @@ spec:
         #ports:
         #- containerPort: 8090
       - name: server #nginx-1
-        image: nginx:latest
+        image: eu.gcr.io/juice-shop-project/nginx:v1
         ports:
         - containerPort: 80
         resources:      

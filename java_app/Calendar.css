@@ -34,7 +34,7 @@ body {
 }
 .container {
   display: flex;
-  align-self: center;
+  align-self: stretch
   justify-content: center
 }
 .center {

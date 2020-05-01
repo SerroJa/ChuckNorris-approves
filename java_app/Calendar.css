@@ -36,6 +36,9 @@ body {
   display: flex;
   justify-content: center;
 }
+.center {
+	width: 800px;
+}
 h2 {
   font-weight: normal;
 }

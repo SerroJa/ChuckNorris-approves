@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: env-tomcat #nginx-2
-        image: eu.gcr.io/devops-p/docker
+        image: gcr.io/devops-274919/tomcat
         #ports:
         #- containerPort: 8090
       - name: server #nginx-1

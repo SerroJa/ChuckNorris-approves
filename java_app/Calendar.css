@@ -38,6 +38,8 @@ body {
 }
 .center {
 	width: 800px;
+	margin-right: auto;
+        margin-left: auto;
 }
 h2 {
   font-weight: normal;

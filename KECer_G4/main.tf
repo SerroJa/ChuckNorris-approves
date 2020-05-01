@@ -42,5 +42,9 @@ resource "google_container_node_pool" "default" {
       "https://www.googleapis.com/auth/logging.write",
       "https://www.googleapis.com/auth/monitoring",
     ]
+    
+    metadata = {
+      disable-legacy-endpoints = "true"
+    }
   }
 }

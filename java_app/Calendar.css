@@ -32,7 +32,10 @@ body {
   font-size: 10pt;
   margin: 0px 20px 20px 20px;
 }
-
+.container {
+  display: flex;
+  justify-content: center;
+}
 h2 {
   font-weight: normal;
 }

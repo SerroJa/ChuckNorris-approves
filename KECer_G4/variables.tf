@@ -12,16 +12,16 @@ variable "init_node_count" {
 
 variable "type_machine" {
 	type = string
-	default = "e2-medium" //n1-standard-1
+	default = "n1-standard-1"
 }
 variable "region_type" {
 	type = string
-	default = "us-central1"  //europe-west1
+	default = "europe-west1" 
 }
 variable "credentials_file_path" {
 	type = string
-	description = "1-st step"
-	default = "f:/DevOps/Terraform/.gcloud/juice-shop-project-8f42062baada.json"
+	description = "some key"
+	default = "file("DevOps-773ad41722e1.json")"
 }
 variable "image_name" {
 	type = string
@@ -29,5 +29,5 @@ variable "image_name" {
 }
 variable "image_url" {
 	type = string
-	default = "eu.gcr.io/juice-shop-project/"
+	default = "eu.gcr.io/juice-shop-project/" 
 }

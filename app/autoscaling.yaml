@@ -1,0 +1,24 @@
+---
+apiVersion: autoscaling/v2beta1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: hpa-server 
+  #namespace: default
+  #resourceVersion: "664"
+  labels:
+    app: appli-ku 
+spec:
+  scaleTargetRef:
+    kind: Deployment # or ReplicaSet
+    name:  appli-ku-deploying 
+    apiVersion: apps/v1
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      targetAverageUtilization: 60
+     #  targetCPUUtilizationPercentage: 80
+      
+      

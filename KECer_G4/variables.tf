@@ -21,7 +21,7 @@ variable "region_type" {
 variable "credentials_file_path" {
 	type = string
 	description = "some key"
-	default = "file("DevOps-773ad41722e1.json")"
+	default = file("DevOps-773ad41722e1.json")
 }
 variable "image_name" {
 	type = string

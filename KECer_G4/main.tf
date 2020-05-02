@@ -9,6 +9,8 @@ resource "google_container_cluster" "default" {
      project     = "${var.project}"
      description = "First_GKE_Cluster"
      location    = "${var.region_type}"
+     monitoring_service = "monitoring.googleapis.com/kubernetes"
+     logging_service    = "logging.googleapis.com/kubernetes"
 
   remove_default_node_pool = true
   initial_node_count = "${var.init_node_count}"

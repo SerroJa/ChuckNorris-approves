@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: server-deployment 
+  name: appli-ku-deploying 
   labels:
     app: appli-ku 
 spec:
@@ -18,24 +18,22 @@ spec:
   template:
     metadata:
       labels:
-        app: appli-ku #nginx-1
+        app: appli-ku
     spec:
       containers:
-      - name: env-tomcat #nginx-2
+      - name: env-tomcat
         image: gcr.io/devops-274919/tomcat
-        #ports:
-        #- containerPort: 8090
-      - name: server #nginx-1
+      - name: server
         image: eu.gcr.io/juice-shop-project/nginx:v1
         ports:
         - containerPort: 80
         resources:      
           limits:
             cpu: "1"
-            memory: "500Mi"
+            memory: "800Mi"
           requests:
             cpu: 150m
-            memory: "500Mi"
+            memory: "400Mi"
         volumeMounts:
         - name: nginx-proxy-config
           mountPath: /etc/nginx/nginx.conf

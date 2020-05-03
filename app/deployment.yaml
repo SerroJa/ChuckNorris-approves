@@ -27,3 +27,4 @@ spec:
         image: eu.gcr.io/juice-shop-project/nginx:v1
         ports:
         - containerPort: 80
+

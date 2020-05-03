@@ -4,30 +4,23 @@ variable "name" {
 }
 variable "project" {
 	type = string
-        default = "devops-274919"  
-}
-variable "init_node_count" {
-	default = 1
+        default = "devops-274919" // what project I should choose
 }
 
-variable "type_machine" {
-	type = string
-	default = "n1-standard-1"
-}
 variable "region_type" {
 	type = string
-	default = "europe-west1" 
+  	default = "europe-west1"
 }
-variable "credentials_file_path" {
-	type = string
-	description = "some key"
-	default = file("DevOps-773ad41722e1.json")
+
+variable "init_node_count" {
+  	default = 1
 }
-variable "image_name" {
+
+variable "machine_type" {
 	type = string
-	default = "nginx:v1"
+	default = "n1-standard-1" //"n1-standard-1"
 }
-variable "image_url" {
+variable "github_token" {
+	description = " used token to access github"
 	type = string
-	default = "eu.gcr.io/juice-shop-project/" 
 }

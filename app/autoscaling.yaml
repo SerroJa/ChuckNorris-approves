@@ -20,5 +20,3 @@ spec:
       name: cpu
       targetAverageUtilization: 60
      #  targetCPUUtilizationPercentage: 80
-      
-      

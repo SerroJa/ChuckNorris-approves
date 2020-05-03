@@ -7,3 +7,4 @@ spec:
   backend:
     serviceName: appli-ku-svc-lb
     servicePort: 80
+

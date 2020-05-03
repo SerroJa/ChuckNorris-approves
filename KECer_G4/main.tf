@@ -3,10 +3,11 @@ resource "google_container_cluster" "default" {
      project     = "${var.project}"
      description = "First_GKE_Cluster"
      location    = "${var.region_type}"
+     monitoring_service = "monitoring.googleapis.com/kubernetes"
+     logging_service    = "logging.googleapis.com/kubernetes"
 
   remove_default_node_pool = true
   initial_node_count = "${var.init_node_count}"
-	
 
      master_auth {
        username = ""
@@ -20,26 +21,22 @@ resource "google_container_cluster" "default" {
 
 resource "google_container_node_pool" "default" {
   name       = "${var.name}-node-pool"
-  project    = "${var.project}"
+  project     = "${var.project}"
   location   = "${var.region_type}"
   cluster    = "${google_container_cluster.default.name}"
   node_count = 1
 
   node_config {
     preemptible  = true
-    machine_type = "${var.type_machine}"
-
-    metadata = {
-      disable-legacy-endpoints = "true"
-    }
+    machine_type = "${var.machine_type}"
 
     oauth_scopes = [
       "https://www.googleapis.com/auth/logging.write",
       "https://www.googleapis.com/auth/monitoring",
-      "https://www.googleapis.com/auth/servicecontrol"
     ]
+    
+    metadata = {
+      disable-legacy-endpoints = "true"
+    }
   }
 }
-
-
-

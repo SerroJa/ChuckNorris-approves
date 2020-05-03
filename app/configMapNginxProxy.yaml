@@ -1,5 +1,3 @@
-#Step 1. Create a ConfigMap with the nginx configuration file. Incoming HTTP requests to port 80 will be forwarded to port 5000 on localhost:
-
 apiVersion: v1
 kind: ConfigMap
 metadata:

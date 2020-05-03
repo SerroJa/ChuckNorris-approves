@@ -1,9 +1,3 @@
-#resource "github_repository" "group4" {
-#	name = "KubeCluster"
-#      	description  = "RepoForKubeService"
-#	private = false
-#	auto_init = true
-#}
 resource "google_container_cluster" "default" {
      name        = "${var.name}"
      project     = "${var.project}"

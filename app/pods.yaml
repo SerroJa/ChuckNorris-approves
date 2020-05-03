@@ -1,0 +1,36 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: appli-ku 
+  labels:
+    app: appli-ku
+spec:
+  containers:
+  - name: env-tomcat
+    image: gcr.io/devops-274919/tomcat
+  - name: server
+    image: eu.gcr.io/juice-shop-project/nginx:v1
+    ports:
+    - containerPort: 80
+    #command: ["stress"]
+    #args: ["--vm", "1", "--vm-bytes", "250M", "--vm-hang", "1"]
+  #restartPolicy: Never  
+    resources:      
+      limits:
+        cpu: "1"
+        memory: "700Mi"
+      requests:
+        cpu: 150m
+        memory: "400Mi"
+    #command: ["/bin/sh", "-c", "ls /etc/nginx/"]
+    volumeMounts:
+    - name: nginx-proxy-config
+      mountPath: /etc/nginx/nginx.conf
+      subPath: nginx.conf
+  volumes:
+  - name: nginx-proxy-config
+    configMap:
+      name: appli-ku-nginx-conf
+  #restartPolicy: Never
+      

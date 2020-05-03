@@ -10,7 +10,7 @@ metadata:
 spec:
   scaleTargetRef:
     kind: Deployment # or ReplicaSet
-    name: hpa-server 
+    name:  appli-ku-deploying 
     apiVersion: apps/v1
   minReplicas: 1
   maxReplicas: 10
@@ -18,5 +18,5 @@ spec:
   - type: Resource
     resource:
       name: cpu
-      targetAverageUtilization: 80
-      # targetCPUUtilizationPercentage: 80
+      targetAverageUtilization: 60
+     #  targetCPUUtilizationPercentage: 80

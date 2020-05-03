@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
   - name: env-tomcat
-    image: gcr.io/devops-274919/tomcat
+    image: eu.gcr.io/devops-274919/tomcat
   - name: server
     image: eu.gcr.io/juice-shop-project/nginx:v1
     ports:

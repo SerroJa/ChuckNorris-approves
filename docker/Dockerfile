@@ -1,4 +1,4 @@
-FROM tomcat:latest
+FROM tomcat:9.0-jdk8
 
 MAINTAINER denys.vbt
 

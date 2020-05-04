@@ -24,7 +24,7 @@ spec:
       - name: env-tomcat
         image: eu.gcr.io/devops-274919/tomcat
       - name: server
-        image: eu.gcr.io/juice-shop-project/nginx:v1
+        image: eu.gcr.io/devops-274919/nginx
         ports:
         - containerPort: 80
         resources:      

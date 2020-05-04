@@ -1,4 +1,4 @@
-FROM tomcat:9.0-jdk8
+FROM tomcat:8.5.54-jdk8-corretto
 
 MAINTAINER denys.vbt
 

@@ -30,10 +30,10 @@ spec:
         resources:      
           limits:
             cpu: "1"
-            memory: "700Mi"
+            memory: "700M"
           requests:
             cpu: 150m
-            memory: "400Mi"
+            memory: "400M"
         volumeMounts:
         - name: nginx-proxy-config
           mountPath: /etc/nginx/nginx.conf

@@ -9,7 +9,7 @@ variable "project" {
 
 variable "region_type" {
 	type = string
-  	default = "eu-west1"
+  	default = "europe-west1"
 }
 
 variable "init_node_count" {

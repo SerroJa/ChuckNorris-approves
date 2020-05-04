@@ -1,4 +1,4 @@
-FROM tomcat:9.0.34
+FROM tomcat:9.0-alpine
 
 MAINTAINER denys.vbt
 

@@ -24,7 +24,7 @@ resource "google_container_node_pool" "default" {
   project     = "${var.project}"
   location   = "${var.region_type}"
   cluster    = "${google_container_cluster.default.name}"
-  node_count = 1
+  node_count = 3
 
   node_config {
     preemptible  = true
